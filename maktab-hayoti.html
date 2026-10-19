@@ -34,11 +34,11 @@
           posts.reverse().forEach(post => {
             const postElement = document.createElement('div');
             postElement.className = 'news-post';
-           postElement.innerHTML = 
+           postElement.innerHTML =`
               <span class="date">${post.date}</span>
               <h3>${post.title}</h3>
               <p>${post.content}</p>
-            ;
+            `;
             container.appendChild(postElement);
           });
         })
