@@ -23,7 +23,27 @@
         <h1>Maktab Hayoti va Haftalik Yangiliklar</h1>
         <p style="text-align: center; color: #555;">Bu sahifada maktabimizdagi kundalik jarayonlar, tadbirlar va yutuqlar har hafta yoritib boriladi.</p>
         <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+        <!-- Telegram botdan keladigan yangi postlar -->
+    <div id="dynamic-posts"></div>
 
+    <script>
+      fetch('posts.json')
+        .then(response => response.json())
+        .then(posts => {
+          const container = document.getElementById('dynamic-posts');
+          posts.reverse().forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'news-post';
+            postElement.innerHTML = 
+              <span class="date">${post.date}</span>
+              <h3>${post.title}</h3>
+              <p>${post.content}</p>
+            ;
+            container.appendChild(postElement);
+          });
+        })
+        .catch(err => console.log('Postlarni yuklashda xatolik:', err));
+    </script>
         <!-- 1-Yangilik (Haftalik yangi post qo'shish uchun shuni nusxalab tepasiga qo'shasiz) -->
         <div class="news-post">
             <span class="date">Hafta: 12-Oktabr — 17-Oktabr, 2026</span>
