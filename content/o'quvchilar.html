@@ -13,7 +13,7 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             background: #ffffff;
             padding: 30px 40px;
@@ -34,7 +34,7 @@
             line-height: 1.8;
         }
         li {
-            padding: 4px 0;
+            padding: 6px 0;
             border-bottom: 1px dashed #eee;
         }
         li:last-child {
@@ -46,9 +46,12 @@
 
     <div class="container">
         <h1>30-sonli maktab o'quvchilari ro'yxati</h1>
+        <ol id="royxat"></ol>
+    </div>
 
-        <!-- Excel'den kopyaladığınız isimleri tam bu iki etiketin arasına yapıştırın -->
-        <ol id="royxat">
+    <script>
+        // Vergul va qo'shtirnoqlar bilan birga nusxalangan ismlar matni
+        const matn = '
 "SHOVKATOVA FAYOZA SUNNATXON QIZI ",
 "NARZULLAYEVA RAYYONA ANZOR QIZI",
 "ODILOVA FARANGIZ FARRUXJON QIZI",
@@ -622,19 +625,17 @@
 "ЗИЁДУЛЛАЕВА РУХШОНА НАРЗУЛЛО ҚИЗИ",
 
 
-        </ol>
-    </div>
 
-    <script>
-        // Bu kod düz metin olarak yapıştırılan isimleri otomatik numaralı liste yapar
-        const ol = document.getElementById('royxat');
-        const lines = ol.innerText.split('\n');
-        ol.innerHTML = '';
-        lines.forEach(line => {
-            if (line.trim() !== '') {
+        const olContainer = document.getElementById('royxat');
+        
+        // Qo'shtirnoq va vergul bilan ajratilgan ismlarni alohida massivga bo'lib oladi
+        const ismlar = matn.split('",').map(ism => ism.replace(/"/g, '').trim());
+
+        ismlar.forEach(ism => {
+            if (ism) {
                 const li = document.createElement('li');
-                li.textContent = line.trim();
-                ol.appendChild(li);
+                li.textContent = ism;
+                olContainer.appendChild(li);
             }
         });
     </script>
