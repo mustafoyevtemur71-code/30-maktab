@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-sonli maktab o'qituvchilari ro'yxati</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px 15px;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #1a56db;
+            margin-bottom: 25px;
+            font-size: 24px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 15px;
+        }
+        ol {
+            padding-left: 25px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        li {
+            padding: 6px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #1a56db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn">&larr; Bosh sahifaga qaytish</a>
+        <h1>30-sonli maktab o'qituvchilari ro'yxati</h1>
+        <ol id="royxat"></ol>
+    </div>
+
+    <script>
+        // O'qituvchilar ro'yxatini shu yerga yozasiz
+        const oqituvchilar = [
+            "QOBILOVA SABINA PARDA QIZI",
+"MUSTAFAYEV TEMURBEK O‘KTAM O‘G‘LI",
+"SAMADOV SARDOR SARVAR O‘G‘LI",
+"G‘OBBOROVA AZIZA SIROJIDDIN QIZI",
+"YARMATOVA LAZIZA MIRALI QIZI",
+"NORBOBOYEV TOXIRJON SHERAVATOVICH",
+"USMONOVA GULNOZA URAL QIZI",
+"TO‘LQINOV ELNUR TO‘LQIN O‘G‘LI",
+"ERGASHEVA ZARNIGOR AXMAT QIZI",
+"BARATOV IBROXIM SODIQ O‘G‘LI",
+"AVLOQULOVA DILOBAR RAVSHANOVNA",
+"ERGASHEV MADAMIN TUXLIYEVICH",
+"XOLMIRZAYEVA DILNOZA ABDIAXATOVNA",
+"BOYMURODOV DONIYOR ABDIYEVICH",
+"ORIPOVA NILUFAR SAPAROVNA",
+"JUMANOVA RUXSAT SUYUNOVNA",
+"TUXLIYEV JOBIR JUMANOVICH",
+"XAKIMOVA SHOXISTA OLTIYEVNA",
+"ESHNAZAROVA FAROG‘AT ESHDAVLATOVNA",
+"TUXLIYEVA FERUZA JUMANOVNA",
+"BERDIYEVA NORGUL XOLBOBOYEVNA",
+"SALIMOVA MUTABAR BURIYEVNA",
+"KAMOLOVA DILAFRUZ AXMATOVNA",
+"ERGASHEV O‘KTAM MUSTAFAYEVICH",
+"UMAROVA SEVARA BAXTIYOROVNA",
+"XUSHVAQOVA DILOROM ESHONQULOVNA",
+"NIYOZOV AXAD SHAVKATOVICH",
+"QODIROVA MUNOJAT G‘ULOMOVNA",
+"AKBAROVA RUKIYA SAYFULLAYEVNA",
+"BAXROMOVA ADIBA INXONOVNA",
+"KUCHAROVA ZEBO YUSUPOVNA",
+"TUXLIYEV TOSHTEMIR JOVLIYEVICH",
+"MEYLIYEVA GULRUX JO‘RAYEVNA",
+"ESHBOBOYEVA GULNORA SHUXRAT QIZI",
+"TEMIROVA MARJONA TO‘RA QIZI",
+"NORQULOVA MATLUBA PARDAYEVNA",
+"ERGASHEVA GUZAL JOVLIYEVNA",
+"OQMIRZAYEVA YULDUZ XURRAM QIZI",
+"TURSUNOVA CHAROS KARIMOVNA",
+"BERDIYEVA ADIBA TO‘RA QIZI",
+"BERDIYEV AXROR TURAYEVICH",
+"ABDULLAYEV JAXONGIR BEKTOSHEVICH",
+"LUGMANOVA FERUZAXON LUXMANOVNA",
+"TURSUNOVA DILNORA NOSIR QIZI",
+"JONKOBILOV JASUR ABDISAYITOVICH",
+"MIRZAYEVA NARGIZA QAXRAMONOVNA",
+"ABDIRAXIMOVA MOHIGUL BAXTIYOROVNA",
+"NAZAROVA HILOLA USAR QIZI",
+"SALAYEVA ZULFIYA ABDIOLIMOVNA",
+"YADGAROVA LATOFAT ALISHEROVNA",
+"ABDURAXMONOVA DILFUZA G‘AYRATOVNA",
+  ];
+
+            // Qolgan o'qituvchilarni shu yerga qo'shasiz
+        ];
+
+        const olContainer = document.getElementById('royxat');
+        
+        oqituvchilar.forEach(ism => {
+            const li = document.createElement('li');
+            li.textContent = ism;
+            olContainer.appendChild(li);
+        });
+    </script>
+
+</body>
+</html>
