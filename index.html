@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30-maktab rasmiy veb-sayti</title>
+    
+    <!-- SEO Meta-teglari -->
+    <title>30-sonli maktab | 30-maktab-te</title>
+    <meta name="description" content="30-sonli umumiy o'rta ta'lim maktabi (30-maktab-te) rasmiy veb-sayti.">
+    <meta name="keywords" content="30-maktab, 30 maktab, 30-maktab-te, maktab sayti">
+
+    <!-- FontAwesome Ikonkalari -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <style>
         * {
             box-sizing: border-box;
@@ -134,18 +141,24 @@
         /* Main Container */
         .container {
             max-width: 1100px;
-            margin: -25px auto 40px;
+            margin: 0 auto 40px;
             padding: 0 15px;
         }
 
-        /* Stats Section */
+        .section-title {
+            text-align: center;
+            margin: 30px 0 15px;
+            font-size: 22px;
+            color: #1e3a8a;
+        }
+
+        /* Stats Grid */
         .stats {
             display: grid;
             grid-template-columns: 1fr;
             gap: 15px;
             margin-bottom: 30px;
         }
-
         @media (min-width: 600px) {
             .stats {
                 grid-template-columns: repeat(3, 1fr);
@@ -158,27 +171,30 @@
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
         }
-   
-.stat-card i {
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .stat-card i {
             font-size: 32px;
             color: #2563eb;
             margin-bottom: 8px;
         }
 
         .stat-card h3 {
-            font-size: 24px;
+            font-size: 20px;
             color: #0f172a;
         }
 
-        /* Features Section */
-        .section-title {
-            text-align: center;
-            margin: 30px 0 15px;
-            font-size: 22px;
-            color: #1e3a8a;
+        .stat-card p {
+            color: #64748b;
+            font-size: 14px;
         }
 
+        /* Features Section */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -218,21 +234,8 @@
             font-size: 13px;
         }
     </style>
-    footer p {
-            opacity: 0.7;
-            font-size: 13px;
-        }
-    </style>
-
-    <!-- SEO meta-teglarini shu yerga kiritasiz -->
-    <title>30-sonli maktab | 30-maktab-te</title>
-    <meta name="description" content="30-sonli umumiy o'rta ta'lim maktabi (30-maktab-te) rasmiy veb-sayti.">
-    <meta name="keywords" content="30-maktab, 30 maktab, 30-maktab-te, maktab sayti">
-
 </head>
 <body class="market">
-</head>
-<body>
 
     <!-- Header -->
     <header>
@@ -257,71 +260,54 @@
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Stats -->
-<!-- Rahbariyat bo'limi -->
-<div class="section-title" style="margin-top: 40px; text-align: center; font-size: 24px; color: #333;">Maktab rahbariyati</div>
-<div class="stats">
-    <div class="stat-card" style="cursor: default;">
-        <i class="fas fa-user-tie" style="color: #2563eb;"></i>
-        <h3>Direktor</h3>
-        <p style="font-weight: bold; margin-top: 5px;">Ergashev O'ktam</p>
-    </div>
-
-    <div class="stat-card" style="cursor: default;">
-        <i class="fas fa-user-shield" style="color: #10b981;"></i>
-        <h3>O'quv ishlari bo'yicha o'rinbosar</h3>
-        <p style="font-weight: bold; margin-top: 5px;">Berdiyev Axror</p>
-    </div>
-
-    <div class="stat-card" style="cursor: default;">
-        <i class="fas fa-hands-helping" style="color: #f59e0b;"></i>
-        <h3>Ma'naviy-ma'rifiy ishlar bo'yicha o'rinbosar</h3>
-        <p style="font-weight: bold; margin-top: 5px;">Mirzayeva Nargiza</p>
-    </div>
-</div>
-
-<!-- O'quvchilar va O'qituvchilar bo'limi -->
-<div class="section-title" style="margin-top: 40px; text-align: center; font-size: 24px; color: #333;">Asosiy ko'rsatkichlar</div>
-<div class="stats">
-    <a href="content/o'quvchilar.html" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
-        <div class="stat-card">
-            <i class="fas fa-user-graduate"></i>
-            <h3>800+</h3>
-            <p>O'quvchilar</p>
-        </div>
-    </a>
-
-    <a href="content/o'qituvchilar.html" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
-        <div class="stat-card">
-            <i class="fas fa-chalkboard-teacher"></i>
-            <h3>50+</h3>
-            <p>Malakali o'qituvchilar</p>
-        </div>
-    </a>
-
-    <div class="stat-card">
-        <i class="fas fa-award"></i>
-        <h3>95%</h3>
-        <p>Oliy ta'limga kirish</p>
-    </div>
-</div>
-     
-        <!-- Afzalliklar -->
-        <h2 class="section-title">Maktabimiz imkoniyatlari</h2>
-        <div class="grid">
-            <div class="card">
-                <h3><i class="fas fa-laptop-code" style="color: #2563eb;"></i> Kompyuter xonalari</h3>
-                <p>O'quvchilar axborot texnologiyalari va dasturlash asoslarini puxta egallashlari uchun barcha sharoitlar yaratilgan.</p>
+        
+        <!-- Rahbariyat bo'limi -->
+        <div class="section-title">Maktab rahbariyati</div>
+        <div class="stats">
+            <div class="stat-card" style="cursor: default;">
+                <i class="fas fa-user-tie" style="color: #2563eb;"></i>
+                <h3>Direktor</h3>
+                <p style="font-weight: bold; margin-top: 5px;">Ergashev O'ktam</p>
             </div>
-            <div class="card">
-                <h3><i class="fas fa-running" style="color: #f59e0b;"></i> Sport to'garaklari</h3>
-                <p>Futbol, basketbol va shaxmat to'garaklari orqali o'quvchilarimiz sport musobaqalarida faol qatnashadilar.</p>
+
+            <div class="stat-card" style="cursor: default;">
+                <i class="fas fa-user-shield" style="color: #10b981;"></i>
+                <h3>O'quv ishlari bo'yicha o'rinbosar</h3>
+                <p style="font-weight: bold; margin-top: 5px;">Berdiyev Axror</p>
             </div>
-            <div class="card">
-                <h3><i class="fas fa-book-reader" style="color: #10b981;"></i> Kutubxona</h3>
-                <p>Badiiy va ilmiy adabiyotlarga boy kutubxonamiz o'quvchilarning dunyoqarashini kengaytirishga xizmat qiladi.</p>
+
+            <div class="stat-card" style="cursor: default;">
+                <i class="fas fa-hands-helping" style="color: #f59e0b;"></i>
+                <h3>Ma'naviy-ma'rifiy ishlar bo'yicha o'rinbosar</h3>
+                <p style="font-weight: bold; margin-top: 5px;">Mirzayeva Nargiza</p>
             </div>
         </div>
+
+        <!-- Asosiy ko'rsatkichlar -->
+        <div class="section-title">Asosiy ko'rsatkichlar</div>
+        <div class="stats">
+            <a href="content/o'quvchilar.html" style="text-decoration: none; color: inherit; display: block;">
+                <div class="stat-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>800+</h3>
+                    <p>O'quvchilar</p>
+                </div>
+            </a>
+            <a href="content/o'qituvchilar.html" style="text-decoration: none; color: inherit; display: block;">
+                <div class="stat-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>50+</h3>
+                    <p>Malakali o'qituvchilar</p>
+                </div>
+            </a>
+
+            <div class="stat-card">
+                <i class="fas fa-award"></i>
+                <h3>95%</h3>
+                <p>Oliy ta'limga kirish</p>
+            </div>
+        </div>
+
     </div>
 
     <!-- Footer -->
@@ -331,7 +317,6 @@
 
 </body>
 </html>
-
 
 
 
