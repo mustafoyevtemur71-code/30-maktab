@@ -50,9 +50,9 @@
     </div>
 
     <script>
-        // Vergul va qo'shtirnoqlar bilan birga nusxalangan ismlar matni
-        const matn = '
-"SHOVKATOVA FAYOZA SUNNATXON QIZI ",
+        // O'quvchilar ro'yxati
+        const oquvchilar = [
+       "SHOVKATOVA FAYOZA SUNNATXON QIZI ",
 "NARZULLAYEVA RAYYONA ANZOR QIZI",
 "ODILOVA FARANGIZ FARRUXJON QIZI",
 "SALIMOV ABUBAKIR ALIJON O`G`LI",
@@ -623,20 +623,14 @@
 "ABDIVOXIDOVA ASALOY SHAROFIDDIN QIZI",
 "ГАДАЕВ АСЛОНБЕК КЕЛДИЁР ЎҒЛИ",
 "ЗИЁДУЛЛАЕВА РУХШОНА НАРЗУЛЛО ҚИЗИ",
-
-
+];
 
         const olContainer = document.getElementById('royxat');
         
-        // Qo'shtirnoq va vergul bilan ajratilgan ismlarni alohida massivga bo'lib oladi
-        const ismlar = matn.split('",').map(ism => ism.replace(/"/g, '').trim());
-
-        ismlar.forEach(ism => {
-            if (ism) {
-                const li = document.createElement('li');
-                li.textContent = ism;
-                olContainer.appendChild(li);
-            }
+        oquvchilar.forEach(ism => {
+            const li = document.createElement('li');
+            li.textContent = ism;
+            olContainer.appendChild(li);
         });
     </script>
 
