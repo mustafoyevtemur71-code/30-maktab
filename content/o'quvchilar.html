@@ -606,3 +606,21 @@ ABDIVOXIDOVA ASALOY SHAROFIDDIN QIZI
     </script>
 </body>
 </html>
+<ol id="royxat">
+        <!-- Excel'dagi ismlarni shu yerga qo'yasiz -->
+    </ol>
+
+    <script>
+        // O'quvchilar ro'yxatini shu yerga massiv (ro'yxat) ko'rinishida yozamiz
+        const oquvchilar = [
+           
+
+        const olContainer = document.getElementById('royxat');
+        olContainer.innerHTML = '';
+        
+        oquvchilar.forEach((ism) => {
+            const li = document.createElement('li');
+            li.textContent = ism;
+            olContainer.appendChild(li);
+        });
+    </script>
