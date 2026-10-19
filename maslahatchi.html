@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maktab Maslahatchisi - 30-sonli Maktab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .logo p {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #f1c40f;
+        }
+
+        /* Main Container */
+        .main-container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* Card / Profile Section */
+        .profile-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 6px solid #2a5298;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f1c40f;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .profile-info h2 {
+            font-size: 28px;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+
+        .profile-info .badge {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1e3c72;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .profile-info p {
+            font-size: 15px;
+            color: #555;
+        }
+
+        /* Tasks Section */
+        .tasks-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .tasks-section h3 {
+            font-size: 22px;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 10px;
+        }
+
+        .task-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .task-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .task-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .task-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .task-item h4 {
+            color: #2a5298;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .task-item p {
+            font-size: 14px;
+            color: #64748b;
+        }
+      /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e3c72;
+            color: white;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigatsiya -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>30-MAKTAB</h1>
+                <p>Bilim va ma'rifat maskani</p>
+            </div>
+            <nav>
+                <a href="index.html">Bosh sahifa</a>
+                <a href="maktab-hayoti.html">Maktab hayoti</a>
+                <a href="E'lonlar.html">E'lonlar</a>
+                <a href="to'garaklar.html">To'garaklar</a>
+                <a href="maslahatchi.html" class="active">Maktab maslahatchisi</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Asosiy Qism -->
+    <div class="main-container">
+        
+        <!-- Maslahatchi Profili -->
+        <div class="profile-card">
+            <!-- Rasm mavjud bo'lsa, images/maslahatchi.jpg yo'lini ko'rsatasiz -->
+            <img src="images/maslahatchi.jpg" alt="Mustafoyev Temurbek" class="profile-img" onerror="this.src='https://via.placeholder.com/180?text=Maslahatchi'">
+            <div class="profile-info">
+                <h2>Mustafoyev Temurbek</h2>
+                <span class="badge">30-sonli maktab maslahatchisi</span>
+                <p>O'quvchilarning psixologik va ijtimoy rivojlanishi, kasb-hunarga yo'naltirilishi va maktabdagi sog'lom muhitni ta'minlash bo'yicha mas'ul maslahatchi.</p>
+            </div>
+        </div>
+
+        <!-- Maslahatchining Vazifalari -->
+        <div class="tasks-section">
+            <h3>Maktab Maslahatchisining Asosiy Vazifalari</h3>
+            
+            <div class="task-grid">
+                
+                <div class="task-item">
+                    <div class="task-icon">🎓</div>
+                    <h4>Kasb-hunarga Yo'naltirish</h4>
+                    <p>O'quvchilarning qiziqish va qobiliyatlarini aniqlab, kelajakda to'g'ri kasb tanlashlarida ko'maklashish.</p>
+                </div>
+
+                <div class="task-item">
+                    <div class="task-icon">🤝</div>
+                    <h4>Psixologik va Ma'naviy Qo'llab-quvvatlash</h4>
+                    <p>O'quvchilar o'rtasida o'zaro do'stona muhitni shakllantirish hamda ularning ruhiy salomatligini muhofaza qilish.</p>
+                </div>
+
+                <div class="task-item">
+                    <div class="task-icon">👨‍👩‍👧‍👦</div>
+                    <h4>Ota-onalar bilan Hamkorlik</h4>
+                    <p>O'quvchilarning ta'lim-tarbiyasi va rivojlanishi bo'yicha ota-onalar hamda o'qituvchilar bilan muntazam muloqot olib borish.</p>
+                </div>
+
+                <div class="task-item">
+                    <div class="task-icon">🌱</div>
+                    <h4>Shaxsiy Rivojlanish Treninglari</h4>
+                    <p>O'quvchilarning yetakchilik, muloqot va vaqtni to'g'ri boshqarish ko'nikmalarini oshirishga qaratilgan mashg'ulotlar o'tkazish.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 30-sonli umumiy o'rta ta'lim maktabi. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
